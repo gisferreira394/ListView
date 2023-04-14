@@ -28,6 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            "0",
+            "Celular",
+            "1.000",
+            "R$ 1.090,00"}, -1);
             this.listView1 = new System.Windows.Forms.ListView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,10 +59,14 @@
             this.Produto,
             this.Quantidade,
             this.Preco});
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
+            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem2});
             this.listView1.Location = new System.Drawing.Point(153, 29);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(367, 97);
+            this.listView1.Size = new System.Drawing.Size(367, 146);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -95,6 +104,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Adicionar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -165,6 +175,7 @@
             this.button2.TabIndex = 10;
             this.button2.Text = "Remover";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
